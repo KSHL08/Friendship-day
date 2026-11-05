@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Happy Friendship Day</title>
+    <link rel="stylesheet" href="friendship.css" />
+  </head>
+  <body>
+    <main class="page">
+      <div class="sparkles" aria-hidden="true"></div>
+
+      <button id="musicBtn" class="music-btn" type="button" aria-label="Toggle music" hidden>🔇</button>
+
+      <section class="card">
+        <!-- 1. Intro -->
+        <section id="intro" class="screen active" aria-labelledby="introTitle">
+          <div class="big-emoji" aria-hidden="true">🤝</div>
+          <h1 id="introTitle">Happy Friendship Day, <span id="friendName">buddy</span>!</h1>
+          <p class="subtitle">I made a little page just for you.</p>
+          <button id="startBtn" class="btn primary" type="button">Open it 🎉</button>
+        </section>
+
+        <!-- 2. Compliments -->
+        <section id="cards" class="screen" aria-labelledby="cardsTitle">
+          <h2 id="cardsTitle">Why you're awesome 🌟</h2>
+          <p class="subtitle">Tap every card.</p>
+          <div id="cardGrid" class="card-grid"></div>
+          <p id="cardText" class="card-text" aria-live="polite"></p>
+          <button id="toQuizBtn" class="btn primary" type="button" disabled>Next</button>
+        </section>
+
+        <!-- 3. Quiz -->
+        <section id="quiz" class="screen" aria-labelledby="quizTitle">
+          <h2 id="quizTitle">How well do you know me? 😄</h2>
+          <div id="quizList" class="quiz-list"></div>
+          <p id="quizStatus" class="message" aria-live="polite"></p>
+          <button id="toCertBtn" class="btn primary" type="button" disabled>Get your certificate</button>
+        </section>
+
+        <!-- 4. Certificate -->
+        <section id="certificate" class="screen" aria-labelledby="certTitle">
+          <div class="cert" id="cert">
+            <p class="cert-eyebrow">Official Certificate</p>
+            <h2 id="certTitle">Best Friend Award</h2>
+            <p class="cert-line">This is proudly presented to</p>
+            <p class="cert-name" id="certName"></p>
+            <p class="cert-body" id="certBody"></p>
+            <div class="cert-footer">
+              <div>
+                <span id="certDate"></span>
+                <small>Date</small>
+              </div>
+              <div class="seal" aria-hidden="true">🏅</div>
+              <div>
+                <span id="certFrom"></span>
+                <small>Signed</small>
+              </div>
+            </div>
+          </div>
+          <div class="buttons no-print">
+            <button id="printBtn" class="btn primary" type="button">Save / Print</button>
+            <button id="replayBtn" class="btn ghost" type="button">Replay 🎈</button>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">Made with 😊 by Kushal</footer>
+
+    <audio id="bgMusic" preload="auto" loop></audio>
+    <script src="friendship.js"></script>
+  </body>
+</html>
